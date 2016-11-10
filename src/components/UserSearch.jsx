@@ -6,15 +6,6 @@ import {
   Button } from 'react-bootstrap';
 
 class UserSearch extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { user: 'Billy' };
-  }
-
-  handleChange(e) {
-    this.setState({ user: e.target.value });
-  }
-
   render() {
     return (
       <form>
@@ -26,7 +17,11 @@ class UserSearch extends Component {
             onChange={this.props.userUpdate}
             placeholder="Enter a username" />
         </FormGroup>
-        <Button block bsStyle="primary" onClick={this.props.searchFn}>Search</Button>
+        <Button
+          block
+          bsStyle="primary"
+          type="submit"
+          onClick={this.props.searchFn}>Search</Button>
       </form>
     );
   }
