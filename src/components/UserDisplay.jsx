@@ -5,11 +5,12 @@ import {
   Col,
   Image
 } from 'react-bootstrap';
+import { shuffle } from 'lodash';
 
 class UserDisplay extends Component {
   render() {
     const usr = this.props.usr;
-    const top5 = (this.props.repos) ? this.props.repos.slice(0, 5) : [];
+    const top5 = (this.props.repos) ? shuffle(this.props.repos).slice(0, 5) : [];
 
     if (!usr) return null;
     return (
