@@ -15,7 +15,7 @@ class App extends Component {
 
   fetchUser(e) {
     e.preventDefault();
-    const API_USER_BASE = 'http://api.github.com/users/'
+    const API_USER_BASE = '//api.github.com/users/'
 
     if (!this.state.firstSearch) this.setState({firstSearch: true});
 
